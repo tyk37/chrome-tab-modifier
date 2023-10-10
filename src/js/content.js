@@ -286,8 +286,12 @@ chrome.storage.local.get('tab_modifier', function (items) {
             chrome.runtime.sendMessage({ action: 'setMuted' });
         }
     };
+
+    setTimeout(function() {
     
     processPage();
+
+    }, 5000)
     
     // Reverted #39
     // w.onhashchange = processPage;
